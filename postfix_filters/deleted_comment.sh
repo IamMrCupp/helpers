@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # deleted_comments.sh
-# Aaron Cupp @ Study.com LLC  [aaron.cupp (at) study.com]
+# Aaron Cupp [mrcupp@mrcupp.com]
 #
 # version: 1.0.0
 # updated: 2016.01.07
@@ -25,7 +25,7 @@ cd $INSPECT_DIR || { echo $INSPECT_DIR does not exist; exit $EX_TEMPFAIL; }
 cat >in.$$ || { echo Cannot save mail to file; exit $EX_TEMPFAIL; }
 
 ## Do Stuff Here!!
-if grep -q "conf2.ue1.prod.study.com" in.$$
+if grep -q "REPLACE_ME_HOSTNAME_OF_EMAIL_RELAY" in.$$
 then
     if grep -q "<strong>deleted</strong> a comment" in.$$
     then
