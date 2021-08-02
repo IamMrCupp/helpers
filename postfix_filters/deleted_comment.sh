@@ -25,7 +25,7 @@ cd $INSPECT_DIR || { echo $INSPECT_DIR does not exist; exit $EX_TEMPFAIL; }
 cat >in.$$ || { echo Cannot save mail to file; exit $EX_TEMPFAIL; }
 
 ## Do Stuff Here!!
-if grep -q "REPLACE_ME_HOSTNAME_OF_EMAIL_RELAY" in.$$
+if grep -q "CONFLUENCE_NODE_FQDN" in.$$
 then
     if grep -q "<strong>deleted</strong> a comment" in.$$
     then
